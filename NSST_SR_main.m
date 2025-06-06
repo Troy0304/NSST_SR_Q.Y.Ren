@@ -29,12 +29,12 @@ J2 = zeros(l,l);
 J1(1:m,1:n) = I1;
 J2(1:m,1:n) = I2;
 
-%% Parameters for NSST
+% Parameters for NSST
 lpfilt = 'maxflat';
 shear_parameters.dcomp =[ 4  4  3  3];
 shear_parameters.dsize =[32 32 16 16];
 
-%% NSST分解
+% NSST分解
 [dst1,shear_f1]=nsst_dec2(J1,shear_parameters,lpfilt);
 [dst2,shear_f2]=nsst_dec2(J2,shear_parameters,lpfilt);
 
@@ -43,6 +43,7 @@ shear_parameters.dsize =[32 32 16 16];
 X1_1= dst1{1};
 X1_2 =dst2{1};
 
+%步长及稀疏误差
 overlap = 6;                    
 epsilon=0.1;
 

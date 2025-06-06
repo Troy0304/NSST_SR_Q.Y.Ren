@@ -1,5 +1,7 @@
 function F = nsst_fuse_noVSC(X1, X2,c)
+%基于改进的拉普拉斯能量的融合方法
 % X1,X2:两幅子带图像 
+
 [M, N] = size(X1);
 F = zeros(M,N);
 
